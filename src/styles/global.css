@@ -1,0 +1,45 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root{
+ /* Colors */
+ --accent-dark: #824e39;
+ --accent-light: #eccfc1;
+ --accent-gray: #636566;
+
+ /* Text Sizes*/
+ --text-sm: 1.2rem;
+ --text-2sm: 1.35rem;
+ --text-base: 1.5rem;
+ --text-md: 1.75rem;
+ --text-lg: 1.875rem;
+ --text-xl: 2rem;
+ --text-2xl: 2.25rem;
+ --text-3xl: 2.5rem;
+ --text-4xl: 3rem;
+ --text-5xl: 4rem;
+
+ /* Fonts */
+ --font-body: 'Playfair Display', serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body{	
+	font-family: var(--font-body);
+	background-color: white;
+	line-height: 1.5;
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	overflow-wrap: break-word;
+}

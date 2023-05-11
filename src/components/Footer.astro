@@ -1,0 +1,74 @@
+---
+const today = new Date();
+import {
+	IoMailSharp,
+	IoLogoFacebook,
+	IoLogoInstagram,
+} from "react-icons/io5/index.js";
+import { INSTAGRAM_URL, FACEBOOK_URL } from "../consts";
+import DropdownMenuFooter from "./DropdownMenuFooter";
+---
+
+<footer class="bottom-0 p-6">
+	<hr class="border-t-4 border-accent-dark" />
+	<div
+		class="relative flex flex-col justify-center py-20 lg:flex-row lg:gap-32"
+	>
+		<div class="flex items-center gap-6 text-base lg:hidden">
+			<DropdownMenuFooter client:visible />
+		</div>
+		<div
+			class="relative hidden lg:flex lg:flex-col"
+			style="max-width: 230px;"
+		>
+			<h1 class="mb-8 text-text-md font-semibold">Location</h1>
+			<h3 class="text-text-2sm">
+				5475 West Loop S, Ste 170, Houston, TX, United States, Texas
+			</h3>
+		</div>
+		<div class="relative hidden lg:flex lg:flex-col">
+			<h1 class="mb-8 text-text-md font-semibold">Operating Hours</h1>
+			<ul class="space-y-4 text-text-2sm">
+				<li>Mon-Saturday: 11:00am - 8pm</li>
+				<li>Sunday: 12:00am - 8pm</li>
+			</ul>
+		</div>
+		<div class="relative hidden lg:flex lg:flex-col">
+			<h1 class="mb-8 text-text-md font-semibold">Contact Us</h1>
+			<ul class="mb-7 flex flex-row items-center justify-center gap-4">
+				<li class="transform transition-transform hover:scale-125">
+					<a href={INSTAGRAM_URL}>
+						<IoLogoInstagram
+							className="h-9 w-9 text-accent-dark"
+							aria-hidden="true"
+						/>
+					</a>
+				</li>
+				<li class="transform transition-transform hover:scale-125">
+					<a href={FACEBOOK_URL}>
+						<IoLogoFacebook
+							className="h-9 w-9 text-accent-dark"
+							aria-hidden="true"
+						/>
+					</a>
+				</li>
+				<li class="transform transition-transform hover:scale-125">
+					<a href="mailto:Jadesteahouse2019@gmail.com">
+						<IoMailSharp
+							className="h-9 w-9 text-accent-dark"
+							aria-hidden="true"
+						/>
+					</a>
+				</li>
+			</ul>
+			<h3 class="flex justify-center text-text-2sm">
+				(281) 974-1437
+			</h3>
+		</div>
+	</div>
+	<div
+		class="relative flex justify-center bg-accent-dark p-4 text-center text-lg text-white"
+	>
+		&copy; {today.getFullYear()} JADES TEA HOUSE
+	</div>
+</footer>

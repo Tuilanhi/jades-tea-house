@@ -1,0 +1,25 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
+		extend: {
+			fontSize: {
+				'text-sm': '1.2rem',
+				'text-2sm': '1.35rem',
+				'text-base': '1.5rem',
+				'text-md': '1.75rem',
+				'text-lg': '1.875rem',
+				'text-xl': '2rem',
+				'text-2xl': '2.25rem',
+				'text-3xl': '2.5rem',
+				'text-4xl': '3rem',
+				'text-5xl': '4rem',
+			}
+		},
+		colors: {
+			'accent-dark': "#824e39",
+		}
+
+	},
+	plugins: [require("flowbite/plugin"), require('prettier-plugin-tailwindcss')],
+}

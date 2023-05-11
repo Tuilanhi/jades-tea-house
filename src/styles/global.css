@@ -11,6 +11,7 @@
  --accent-dark: #824e39;
  --accent-light: #eccfc1;
  --accent-gray: #636566;
+ --accent-lighter: #ffe5d0;
 
  /* Text Sizes*/
  --text-sm: 1.2rem;
@@ -36,10 +37,11 @@ body {
 
 body{	
 	font-family: var(--font-body);
-	background-color: white;
+	background-color: var(--accent-lighter);
 	line-height: 1.5;
 	color: black;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	overflow-wrap: break-word;
+	overflow-y: scroll;
 }

@@ -9,7 +9,7 @@ export default function DropdownMenuFooter()
         <div className="flex-col">
             <Menu as="div" className="relative text-left flex-col mb-12">
                 <div className="inline-flex w-full">
-                    <h1 className="text-text-md font-semibold">Location</h1>
+                    <h1 className="text-text-base font-semibold">Location</h1>
                     <Menu.Button>
                         <IoChevronDown
                             className="ml-4 -mr-1 mt-1 h-5 w-5"
@@ -20,14 +20,14 @@ export default function DropdownMenuFooter()
                 <Menu.Items>
                     <div className="my-5">
                         <DropdownMenuItem>
-                            5475 West Loop S, Ste 170, Houston, TX, United States, Texas
+                        5475 West Loop S, Ste 170, Houston, TX 77081
                         </DropdownMenuItem>
                     </div>
                 </Menu.Items>
             </Menu>
             <Menu as="div" className="relative text-left flex-col  mb-12">
                 <div className="inline-flex w-full">
-                    <h1 className="text-text-md font-semibold">Operating Hours</h1>
+                    <h1 className="text-text-base font-semibold">Operating Hours</h1>
                     <Menu.Button>
                         <IoChevronDown
                             className="ml-4 -mr-1 mt-1 h-5 w-5"
@@ -48,7 +48,7 @@ export default function DropdownMenuFooter()
             </Menu>
             <Menu as="div" className="relative text-left flex-col">
                 <div className="inline-flex w-full">
-                    <h1 className="text-text-md font-semibold">Contact Us</h1>
+                    <h1 className="text-text-base font-semibold">Contact Us</h1>
                     <Menu.Button>
                         <IoChevronDown
                             className="ml-4 -mr-1 mt-1 h-5 w-5"
@@ -62,13 +62,13 @@ export default function DropdownMenuFooter()
                             <ul className="mb-7 flex flex-row gap-4">
                                 <li className="transform transition-transform hover:scale-125">
                                     <a href={INSTAGRAM_URL}>
-                                        <IoLogoInstagram className="h-9 w-9 text-accent-dark" aria-hidden="true"/>
+                                        <IoLogoInstagram className="h-7 w-7 text-accent-dark" aria-hidden="true"/>
                                     </a>
                                 </li>
                                 <li className="transform transition-transform hover:scale-125">
                                     <a href={FACEBOOK_URL}>
                                         <IoLogoFacebook
-                                            className="h-9 w-9 text-accent-dark"
+                                            className="h-7 w-7 text-accent-dark"
                                             aria-hidden="true"
                                         />
                                     </a>
@@ -76,7 +76,7 @@ export default function DropdownMenuFooter()
                                 <li className="transform transition-transform hover:scale-125">
                                     <a href="mailto:Jadesteahouse2019@gmail.com">
                                         <IoMailSharp
-                                            className="h-9 w-9 text-accent-dark"
+                                            className="h-7 w-7 text-accent-dark"
                                             aria-hidden="true"
                                         />
                                     </a>

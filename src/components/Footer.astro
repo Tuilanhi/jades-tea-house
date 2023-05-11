@@ -9,10 +9,10 @@ import { INSTAGRAM_URL, FACEBOOK_URL } from "../consts";
 import DropdownMenuFooter from "./DropdownMenuFooter";
 ---
 
-<footer class="bottom-0 p-6">
+<footer class="bottom-0">
 	<hr class="border-t-4 border-accent-dark" />
 	<div
-		class="relative flex flex-col justify-center py-20 lg:flex-row lg:gap-32"
+		class="relative flex flex-col justify-center py-10 lg:py-14 lg:flex-row lg:gap-32"
 	>
 		<div class="flex items-center gap-6 text-base lg:hidden">
 			<DropdownMenuFooter client:visible />
@@ -23,7 +23,7 @@ import DropdownMenuFooter from "./DropdownMenuFooter";
 		>
 			<h1 class="mb-8 text-text-md font-semibold">Location</h1>
 			<h3 class="text-text-2sm">
-				5475 West Loop S, Ste 170, Houston, TX, United States, Texas
+				5475 West Loop S, Ste 170, Houston, TX 77081
 			</h3>
 		</div>
 		<div class="relative hidden lg:flex lg:flex-col">
@@ -67,8 +67,8 @@ import DropdownMenuFooter from "./DropdownMenuFooter";
 		</div>
 	</div>
 	<div
-		class="relative flex justify-center bg-accent-dark p-4 text-center text-lg text-white"
+		class="relative flex justify-center bg-accent-dark p-4 text-center text-text-xxs text-white"
 	>
-		&copy; {today.getFullYear()} JADES TEA HOUSE
+		&copy; {today.getFullYear()} JADE'S TEA HOUSE
 	</div>
 </footer>

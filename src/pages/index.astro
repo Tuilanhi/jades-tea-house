@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { IoIosLeaf } from "react-icons/io";
+import { AiFillStar } from "react-icons/ai";
 ---
 
 <!DOCTYPE html>
@@ -13,38 +15,113 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="relative bg-accent-lighter">
+				<p class="justify-center items-center flex text-text-xxs md:text-text-xs lg:text-text-sm">5475 West Loop S, Ste 170, Houston, TX 77081</p>
+			</div>
+			<div class="relative">
+				<img src="https://i.ibb.co/6ZjTHgM/2-Tea-Cups.jpg" alt="2-Tea-Cups" border="0" class="w-screen h-auto object-cover md:h-screen opacity-75">
+				<div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-4 md:gap-9 lg:gap-12 bg-black bg-opacity-60">
+					<h1 class="text-white text-text-2sm md:text-text-3xl lg:text-text-5xl font-bold uppercase px-10 md:px-20 lg:px-44 text-center">Welcome to Jade's Tea House</h1>
+					<p class="text-white text-text-xs md:text-text-sm lg:text-text-2sm px-8 md:px-14 lg:px-44 text-center" style="max-width: 95rem;">At Jade's Tea House - your one-stop destination for refreshing smoothies, tantalizing slushies, authentic milk tea, premium teas, delicious coffees, and delectable Vietnamese Banh Mi, satisfying all your cravings in one sip!</p>
+					</div>
+			</div>
+			<div class="px-5 xl:px-32 2xl:px-44 py-5 flex lg:flex-row flex-col">
+				<img src="https://i.ibb.co/nmdPVtJ/Holding-Tea-Cup.jpg" alt="Holding-Tea-Cup" border="0" class="w-screen">
+				<div class="flex flex-col items-center justify-center border-black border-2 gap-5 mt-3 py-14 lg:mt-0 lg:ml-3 lg:gap-7">
+					<h1 class="text-text-base md:text-text-md lg:text-text-xl fontbold uppercase flex flex-row"><IoIosLeaf className="mt-1 lg:h-9 lg:w-9 text-dark-green"
+						aria-hidden="true"/>Peach Green Tea</h1>
+					<p class="text-text-xs lg:text-text-sm text-center px-10 max-w-lg lg:max-w-none">Introducing our refreshing Peach Green Tea, crafted with the finest tea leaves and infused with the natural sweetness of ripe peaches. Savor the delightful blend that brings a burst of fruity flavors to every sip, making it the perfect choice for a rejuvenating and delicious tea experience at our store, Jade's Tea House.</p>
+					<div class="flex flex-row gap-1">
+						<h3 class="text-text-xs md:text-text-sm font-semibold">Irresistible Coolness:</h3>
+						<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+						<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+						<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+						<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+						<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					  </div>
+				</div>
+			</div>
+			<div class="px-5 xl:px-32 2xl:px-44 pb-5 flex lg:flex-row flex-col">
+				<img src="https://i.ibb.co/L6q8XX3/Milk-Tea.jpg" alt="Milk-Tea" border="0" class="w-screen order-1 lg:order-2" />
+				<div class="flex flex-col items-center justify-center border-black border-2 gap-5 mt-3 py-14 lg:mt-0 lg:mr-3 lg:gap-7 order-2 lg:order-1">
+				  <h1 class="text-text-base md:text-text-md lg:text-text-xl fontbold uppercase flex flex-row">
+					<IoIosLeaf className="mt-1 lg:h-9 lg:w-9 text-dark-brown" aria-hidden="true" />
+					Jade's Milk Tea
+				  </h1>
+				  <p class="text-text-xs lg:text-text-sm text-center px-10 max-w-lg lg:max-w-none">
+					Indulge in the creamy perfection of Jade's Milk Tea, our signature milk tea crafted with premium tea leaves and a hint of sweetness. Experience a harmonious fusion of flavors that will transport you to a world of pure tea bliss at Jade's Tea House, your ultimate destination for delightful beverages.
+				  </p>
+				  <div class="flex flex-row gap-1">
+					<h3 class="text-text-xs md:text-text-sm font-semibold">Flavorful Bliss:</h3>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+				  </div>
+				</div>
+			  </div>
+			  <div class="px-5 xl:px-32 2xl:px-44 pb-5 flex lg:flex-row flex-col">
+				<img src="https://i.ibb.co/Rc6WNg9/Banh-Mi.jpg" alt="Banh-Mi" border="0" class="w-screen"/>
+				<div class="flex flex-col items-center justify-center border-black border-2 gap-5 mt-3 py-14 lg:mt-0 lg:ml-3 lg:gap-7">
+				  <h1 class="text-text-base md:text-text-md lg:text-text-xl fontbold uppercase flex flex-row">
+					BBQ Pork Banh Mi
+				  </h1>
+				  <p class="text-text-xs lg:text-text-sm text-center px-10 max-w-lg lg:max-w-none">
+					Introducing our mouthwatering BBQ Pork Banh Mi! The perfect harmony of tender, smoky BBQ pork, crisp pickled vegetables, fresh herbs, and a delectable spread of savory sauces, all served in a warm, crusty baguette. Experience the rich flavors and textures that make our Banh Mi a true culinary delight, satisfying your cravings with every bite.
+				  </p>
+				  <div class="flex flex-row gap-1">
+					<h3 class="text-text-xs md:text-text-sm font-semibold">Savory Satisfaction:</h3>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="px-5 xl:px-32 2xl:px-44 pb-5 flex lg:flex-row flex-col">
+				<img src="https://i.ibb.co/dp6ydhj/20230427-DSC-1714.jpg" alt="20230427-DSC-1714" border="0" class="w-screen order-1 lg:order-2" />
+				<div class="flex flex-col items-center justify-center border-black border-2 gap-5 mt-3 py-14 lg:mt-0 lg:mr-3 lg:gap-7 order-2 lg:order-1">
+				  <h1 class="text-text-base md:text-text-md lg:text-text-xl fontbold uppercase flex flex-row">
+					Various Toppings
+				  </h1>
+				  <p class="text-text-xs lg:text-text-sm text-center px-10 max-w-lg lg:max-w-none">
+					Enhance your drink experience with our delightful array of boba toppings. From chewy tapioca pearls to fruity popping boba, we offer a wide selection of toppings to add a burst of flavor and texture to your favorite drinks. Customize your beverage and create a unique combination that suits your taste buds.
+				  </p>
+				  <div class="flex flex-row gap-1">
+					<h3 class="text-text-xs md:text-text-sm font-semibold">Customizable:</h3>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="px-5 xl:px-32 2xl:px-44 pb-5 flex lg:flex-row flex-col">
+				<img src="https://i.ibb.co/s67QBsC/Stack-Cups.jpg" alt="Stack-Cups" border="0" class="w-screen" />
+				<div class="flex flex-col items-center justify-center border-black border-2 gap-5 mt-3 py-14 lg:mt-0 lg:ml-3 lg:gap-7">
+				  <h1 class="text-text-base text-center md:text-text-md lg:text-text-xl fontbold uppercase flex flex-row px-4">
+					Your Satisfaction is Our Pleasure
+				  </h1>
+				  <p class="text-text-xs lg:text-text-sm text-center px-10 max-w-lg lg:max-w-none">
+					At Jade's Tea House, we are dedicated to providing you with an extraordinary customer service experience. Our knowledgeable staff is always ready to assist you in finding the perfect beverage to suit your taste preferences. We take the time to listen to your needs and go the extra mile to ensure your satisfaction.
+				  </p>
+				  <div class="flex flex-row gap-1">
+					<h3 class="text-text-xs md:text-text-sm font-semibold">Customer Service:</h3>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+					<AiFillStar className="text-yellow-400 mt-1 h-5 w-5 lg:h-6 lg:w-6" aria-hidden="true"/>
+				  </div>
+				</div>
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
+

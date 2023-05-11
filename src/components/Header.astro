@@ -1,25 +1,20 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import DropdownMenuHeader from "./DropdownMenuHeader";
+import { SITE_TITLE } from "../consts";
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header class="bg-accent-dark">
+	<div class="relative justify-between md:justify-center lg:justify-between flex flex-row">
+		<img src="/logo-font.png" class="lg:h-36 lg:w-36 md:h-28 md:w-28 h-24 w-24 justify-center flex items-center" />
+		<div class=" flex-row relative hidden lg:flex md:flex justify-center items-center">
+				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-accent-light">Menu</HeaderLink>
+				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-accent-light">Catering</HeaderLink>
+				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-accent-light">Location</HeaderLink>
+				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm border-2 bg-accent-light lg:px-4 px-2 py-1 rounded-md text-black mr-5 lg:mr-7">Order Online</HeaderLink>
+		</div>
+		<div class="flex items-center gap-6 text-base md:hidden lg:hidden">
+			<DropdownMenuHeader client:visible />
+		</div>
+	</div>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>

@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontSize: {
+				'text-xs': '0.9rem',
 				'text-sm': '1.2rem',
 				'text-2sm': '1.35rem',
 				'text-base': '1.5rem',
@@ -18,8 +19,9 @@ module.exports = {
 		},
 		colors: {
 			'accent-dark': "#824e39",
-		}
-
+			'accent-light': '#eccfc1',
+			'transparent': 'transparent',
+		},
 	},
 	plugins: [require("flowbite/plugin"), require('prettier-plugin-tailwindcss')],
 }

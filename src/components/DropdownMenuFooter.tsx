@@ -60,26 +60,26 @@ export default function DropdownMenuFooter()
                     <div className="my-5">
                         <DropdownMenuItem>
                             <ul className="mb-7 flex flex-row gap-4">
-                                <li>
+                                <li className="transform transition-transform hover:scale-125">
                                     <a href={INSTAGRAM_URL}>
                                         <IoLogoInstagram className="h-9 w-9 text-accent-dark" aria-hidden="true"/>
                                     </a>
                                 </li>
-                                <li>
-                                <a href={FACEBOOK_URL}>
-                                    <IoLogoFacebook
-                                        className="h-9 w-9 text-accent-dark"
-                                        aria-hidden="true"
-                                    />
-                                </a>
+                                <li className="transform transition-transform hover:scale-125">
+                                    <a href={FACEBOOK_URL}>
+                                        <IoLogoFacebook
+                                            className="h-9 w-9 text-accent-dark"
+                                            aria-hidden="true"
+                                        />
+                                    </a>
                                 </li>
-                                <li>
-                                <a href="mailto:Jadesteahouse2019@gmail.com">
-                                    <IoMailSharp
-                                        className="h-9 w-9 text-accent-dark"
-                                        aria-hidden="true"
-                                    />
-                                </a>
+                                <li className="transform transition-transform hover:scale-125">
+                                    <a href="mailto:Jadesteahouse2019@gmail.com">
+                                        <IoMailSharp
+                                            className="h-9 w-9 text-accent-dark"
+                                            aria-hidden="true"
+                                        />
+                                    </a>
                                 </li>
                             </ul>
                             <h3 className="flex text-text-2sm">

@@ -4,9 +4,11 @@ import DropdownMenuHeader from "./DropdownMenuHeader";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="bg-accent-dark">
-	<div class="relative justify-between md:justify-center lg:justify-between flex flex-row">
-		<img src="/logo-font.png" class="lg:h-32 lg:w-32 md:h-28 md:w-28 h-24 w-24 justify-center flex items-center" />
+<header class="">
+	<div class="relative justify-between md:justify-center lg:justify-between flex flex-row bg-accent-dark">
+		<a href="/">
+			<img src="/logo-font.png" class="lg:h-32 lg:w-32 md:h-28 md:w-28 h-24 w-24 justify-center flex items-center" />
+		</a>
 		<div class=" flex-row relative hidden lg:flex md:flex justify-center items-center">
 				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-white hover:underline">Menu</HeaderLink>
 				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-white hover:underline">Catering</HeaderLink>
@@ -17,5 +19,8 @@ import { SITE_TITLE } from "../consts";
 			<HeaderLink href="/menu" class="text-text-sm border-2 bg-accent-lighter border-none px-2 py-1 rounded-md text-black">Order Online</HeaderLink>
 			<DropdownMenuHeader client:visible />
 		</div>
+	</div>
+	<div class="relative bg-accent-lighter">
+		<p class="justify-center items-center flex text-text-xxs md:text-text-xs lg:text-text-sm">5475 West Loop S, Ste 170, Houston, TX 77081</p>
 	</div>
 </header>

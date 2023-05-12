@@ -17,12 +17,9 @@ module.exports = {
 				'text-4xl': '3rem',
 				'text-5xl': '4rem',
 			},
-			screens:{
-				'2lg': '1200px',
-			}
 		},
 		colors: {
-			'accent-dark': "#824e39",
+			'accent-dark': "#7D4435",
 			'accent-light': '#eccfc1',
 			'transparent': 'transparent',
 			'accent-lighter': '#ffe5d0',

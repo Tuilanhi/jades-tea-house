@@ -1,0 +1,332 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import {SITE_TITLE, SITE_DESCRIPTION} from "../consts";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+    </head>
+    <body>
+        <Header title={SITE_TITLE}/>
+        <main class="px-6">
+            <div class="relative flex-col flex">
+                <div class="flex justify-center m-7">
+                    <h1 class="uppercase lg:text-text-2xl md:text-text-xl sm:text-text-md text-text-base  underline">Menus</h1>
+                </div>
+                <section class="flex flex-row items-center justify-center m-10 lg:text-text-2sm sm:text-text-sm text-text-xs">
+                    <div class="grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-5 items-center justify-center gap-4 text-center">
+                        <a href="#smoothie"><button id="smoothie-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" data-color="dark-brown">Smoothie/Slushy</button></a>
+                        <a href="#tea"><button id="tea-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" >Milk Tea/Tea</button></a>
+                        <a href="#coffee"><button id="coffee-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer ">Coffee</button></a>
+                        <a href="#food"><button id="food-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer  " >Food</button></a>
+                        <a href="#topping"><button id="topping-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" >Toppings</button></a>
+                    </div>
+                  </section>
+                  
+                  <section class="justify-center flex my-14">
+                    <div id="smoothie" class="content">
+                        <div class="flex flex-col items-center">
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Smoothie</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <h1 class="text-text-base font-bold my-10 border-t-2 border-b-2 border-black w-2/12 text-center">Slushy</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div id="tea" class="content">
+                        <div class="flex flex-col items-center">
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Milk Tea</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Tea</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="coffee" class="content">
+                      <div class="flex flex-col items-center">
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Coffee</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="food" class="content">
+                      <div class="flex flex-col items-center">
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Food</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="topping" class="content">
+                      <div class="flex flex-col items-center">
+                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Toppings</h1>
+                            <div class="w-screen max-w-5xl px-8">
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Avocado</div>
+                                  <div class="w-2/5 text-right">$6.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Banana</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Chocolate</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Coconut</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                              <div class="py-2 text-text-2sm">
+                                <div class="flex justify-between items-center">
+                                  <div class="w-3/5 font-semibold">Cookies and Creams</div>
+                                  <div class="w-2/5 text-right">$5.25</div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+            </div>
+        </main>
+        <script>
+            const buttons = document.querySelectorAll('button');
+            const contentDivs = document.querySelectorAll('.content');
+
+            // Show the "smoothie" content div by default
+            const smoothieButton = document.getElementById('smoothie-btn');
+            const smoothieDiv = document.getElementById('smoothie');
+            
+            smoothieDiv.style.display = 'block';
+            smoothieButton.style.backgroundColor = '#4c311c'; // Highlight the smoothie button
+
+            document.getElementById('tea').style.display = 'none';
+            document.getElementById('coffee').style.display = 'none';
+            document.getElementById('food').style.display = 'none';
+            document.getElementById('topping').style.display = 'none';
+
+            // Store the previously clicked button
+            let previousButton = smoothieButton;
+
+            // Function to reset the previous button's color
+            const resetPreviousButton = () => {
+                if (previousButton) {
+                previousButton.style.backgroundColor = '';
+                }
+            };
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    contentDivs.forEach((div) => div.style.display = 'none');
+                    document.getElementById(button.id.split('-')[0]).style.display = 'block';
+
+                    resetPreviousButton();
+                    button.style.backgroundColor = '#000';
+                    previousButton = button;
+
+                });
+            });
+        </script>
+    </body>
+    <Footer/>
+</html>
+

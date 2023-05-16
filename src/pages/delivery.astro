@@ -1,0 +1,91 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  UBER_EATS,
+  GRUBHUB,
+  DOORDASH,
+  CLOVER,
+} from "../consts";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} , description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="px-6 h-auto sm:h-screen">
+      <div
+        class="relative flex flex-col items-center justify-center py-10 text-center"
+      >
+        <h1 class="text-text-md font-bold uppercase lg:text-text-lg">
+          Delivery
+        </h1>
+        <p class="w-10/12 text-text-xxs md:text-text-xs">
+          Convenient Delivery/Pickup Options: UberEats, DoorDash, Clover, and
+          Grubhub
+        </p>
+      </div>
+      <section class="relative grid grid-cols-2 items-center text-center">
+        <div class="mb-10 flex flex-col">
+          <h1
+            class="pb-6 text-text-2sm font-bold uppercase sm:text-text-base md:text-text-md"
+          >
+            DoorDash
+          </h1>
+          <a href={DOORDASH}
+            ><button
+              class="border-2 border-black bg-black px-2 text-text-xs font-semibold text-white hover:bg-accent-dark hover:text-white md:px-5 md:text-text-sm"
+              >Order Delivery</button
+            ></a
+          >
+        </div>
+        <div class="mb-10 flex flex-col">
+          <h1
+            class="pb-6 text-text-2sm font-bold uppercase sm:text-text-base md:text-text-md"
+          >
+            UberEats
+          </h1>
+          <a href={UBER_EATS}
+            ><button
+              class="border-2 border-black bg-black px-2 text-text-xs font-semibold text-white hover:bg-accent-dark hover:text-white md:px-5 md:text-text-sm"
+              >Order Delivery</button
+            ></a
+          >
+        </div>
+        <div class="mb-10 flex flex-col">
+          <h1
+            class="pb-6 text-text-2sm font-bold uppercase sm:text-text-base md:text-text-md"
+          >
+            GrubHub
+          </h1>
+          <a href={GRUBHUB}
+            ><button
+              class="border-2 border-black bg-black px-2 text-text-xs font-semibold text-white hover:bg-accent-dark hover:text-white md:px-5 md:text-text-sm"
+              >Order Delivery</button
+            ></a
+          >
+        </div>
+        <div class="mb-10 flex flex-col">
+          <h1
+            class="pb-6 text-text-2sm font-bold uppercase sm:text-text-base md:text-text-md"
+          >
+            Clover
+          </h1>
+          <a href={CLOVER}
+            ><button
+              class="border-2 border-black bg-black px-2 text-text-xs font-semibold text-white hover:bg-accent-dark hover:text-white md:px-5 md:text-text-sm"
+              >Order Delivery</button
+            ></a
+          >
+        </div>
+      </section>
+    </main>
+    <Footer/>
+  </body>
+</html>

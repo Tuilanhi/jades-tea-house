@@ -1,0 +1,64 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, FACEBOOK_URL } from "../consts";
+import { FaRegSmileBeam } from "react-icons/fa";
+import { FiThumbsUp } from "react-icons/fi";
+import {SlBubble} from "react-icons/sl";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} , description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="px-6 mb-6">
+      <div class="relative flex flex-col">
+        <div class="items-center text-center py-10">
+        <h1 class="text-text-md font-bold uppercase lg:text-text-lg">
+          Catering
+        </h1>
+        <p class="text-text-xs">Contact us at (281) 974-1437 for Catering and Events</p>
+        </div>
+        <img
+          src="https://i.ibb.co/Y2mth5S/wedding.jpg"
+          alt="wedding"
+          border="0"
+          class="w-screen"
+        />
+        <div class="py-2">
+          <div class="bg-white p-4 shadow-lg">
+            <div class="flex items-center">
+              <img
+                src="https://i.ibb.co/K2dpbgs/logo-dark.jpg"
+                alt="logo-dark"
+                alt="Profile Picture"
+                class="mr-2 h-12 w-12 rounded-full"
+              />
+              <div class="flex flex-col">
+                 <h2 class="text-base font-bold">Jade's Tea House</h2>
+                 <h3 class="text-sm">July 12, 2022</h3>
+              </div>
+
+            </div>
+            <p class="mt-2 flex flex-row text-gray-700">
+              Jade's team at the wedding
+              <FaRegSmileBeam className="mx-2 mt-1 text-black" />
+            </p>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <h3 class="flex flex-row text-lg text-gray-600 hover:text-gray-800"><FiThumbsUp className="h-6 w-6"/>Like</h3>
+                <h3 class="flex flex-row text-lg text-gray-600 hover:text-gray-800"><SlBubble className="h-6 w-6"/>Comment</h3>
+              </div>
+              <p class="text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer/>
+  </body>
+</html>

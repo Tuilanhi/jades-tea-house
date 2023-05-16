@@ -14,14 +14,14 @@ export default function DropdownMenuHeader()
             </div>
             <Menu.Items className="absolute right-0 z-10 origin-top-right rounded-md border mt-2 bg-accent-dark text-accent-lighter">
                 <div className="py-1">
-                    <DropdownMenuItem href="/">
+                    <DropdownMenuItem href="/menu">
                         Menu
                     </DropdownMenuItem>
-                    <DropdownMenuItem href="/">
+                    <DropdownMenuItem href="/catering">
                         Catering
                     </DropdownMenuItem>
-                    <DropdownMenuItem href="/">
-                        Location
+                    <DropdownMenuItem href="/delivery">
+                        Delivery
                     </DropdownMenuItem>
                 </div>
             </Menu.Items>

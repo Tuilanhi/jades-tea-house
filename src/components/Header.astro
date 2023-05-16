@@ -5,22 +5,39 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header class="">
-	<div class="relative justify-between md:justify-center lg:justify-between flex flex-row bg-accent-dark">
-		<a href="/">
-			<img src="/logo-font.png" class="lg:h-32 lg:w-32 md:h-28 md:w-28 h-24 w-24 justify-center flex items-center" />
-		</a>
-		<div class=" flex-row relative hidden lg:flex md:flex justify-center items-center">
-				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-white hover:underline">Menu</HeaderLink>
-				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-white hover:underline">Catering</HeaderLink>
-				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm text-white hover:underline">Location</HeaderLink>
-				<HeaderLink href="/menu" class="lg:ml-10 ml-3 text-text-sm border-2 border-none bg-accent-lighter lg:px-4 px-2 py-2 rounded-md text-black mr-5 lg:mr-7">Order Online</HeaderLink>
-		</div>
-		<div class="flex items-center gap-2 text-base md:hidden lg:hidden">
-			<HeaderLink href="/menu" class="text-text-sm border-2 bg-accent-lighter border-none px-2 py-1 rounded-md text-black">Order Online</HeaderLink>
-			<DropdownMenuHeader client:visible />
-		</div>
-	</div>
-	<div class="relative bg-accent-lighter">
-		<p class="justify-center items-center flex text-text-xxs md:text-text-xs lg:text-text-sm">5475 West Loop S, Ste 170, Houston, TX 77081</p>
-	</div>
+  <div
+    class="relative flex flex-row justify-between bg-accent-dark md:justify-center lg:justify-between"
+  >
+    <a href="/">
+      <img
+        src="/logo-font.png"
+        class="flex h-24 w-24 items-center justify-center md:h-28 md:w-28 lg:h-32 lg:w-32"
+      />
+    </a>
+    <div
+      class="relative hidden flex-row items-center justify-center md:flex lg:flex"
+    >
+      <HeaderLink
+        href="/menu"
+        class="ml-3 text-text-sm text-white hover:underline lg:ml-10"
+      >
+        Menu
+      </HeaderLink>
+      <HeaderLink
+        href="/catering"
+        class="ml-3 text-text-sm text-white hover:underline lg:ml-10"
+      >
+        Catering
+      </HeaderLink>
+      <HeaderLink
+        href="/delivery"
+        class="ml-3 mr-5 rounded-md border-2 border-none bg-accent-lighter px-2 py-2 text-text-sm text-black lg:ml-10 lg:mr-7 lg:px-4"
+      >
+        Delivery
+      </HeaderLink>
+    </div>
+    <div class="flex items-center gap-2 text-base md:hidden lg:hidden">
+      <DropdownMenuHeader client:visible />
+    </div>
+  </div>
 </header>

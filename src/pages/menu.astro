@@ -1,975 +1,1153 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import {SITE_TITLE, SITE_DESCRIPTION} from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { AiFillHeart } from "react-icons/ai";
-
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
-    </head>
-    <body>
-        <Header title={SITE_TITLE}/>
-        <main class="px-6">
-            <div class="relative flex-col flex">
-                <div class="flex justify-center m-7">
-                    <h1 class="uppercase lg:text-text-2xl md:text-text-xl sm:text-text-md text-text-base  underline">Menus</h1>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <>
+    <Header title={SITE_TITLE} />
+    <main class="px-6">
+      <div class="relative flex flex-col">
+        <div class="m-7 flex justify-center">
+          <h1
+            class="text-text-base uppercase underline sm:text-text-md md:text-text-xl lg:text-text-2xl"
+          >
+            Menus
+          </h1>
+        </div>
+        <section
+          class="m-10 flex flex-row items-center justify-center text-text-xs sm:text-text-sm lg:text-text-2sm"
+        >
+          <div
+            class="grid grid-cols-2 items-center justify-center gap-4 text-center sm:grid-cols-3 lg:grid-cols-6"
+          >
+            <a href="#featured"
+              ><button
+                id="featured-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown p-1 text-white"
+                data-color="dark-brown">Featured</button
+              ></a
+            >
+            <a href="#smoothie"
+              ><button
+                id="smoothie-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown px-5 py-1 text-white"
+                data-color="dark-brown">Smoothie/Slushy</button
+              ></a
+            >
+            <a href="#tea"
+              ><button
+                id="tea-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown p-1 text-white"
+                >Milk Tea/Tea</button
+              ></a
+            >
+            <a href="#coffee"
+              ><button
+                id="coffee-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown p-1 text-white"
+                >Coffee</button
+              ></a
+            >
+            <a href="#food"
+              ><button
+                id="food-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown p-1 text-white"
+                >Food</button
+              ></a
+            >
+            <a href="#topping"
+              ><button
+                id="topping-btn"
+                class="w-full cursor-pointer rounded-xl border-2 bg-dark-brown p-1 text-white"
+                >Toppings</button
+              ></a
+            >
+          </div>
+        </section>
+
+        <section class="my-14 flex justify-center">
+          <div id="featured" class="content">
+            <div class="flex flex-col items-center">
+              <div class="mb-10 flex flex-col items-center text-center">
+                <h1
+                  class="mb-3 w-8/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:text-text-md"
+                >
+                  Featured Items
+                </h1>
+                <p class="w-full text-text-xs">
+                  A variety selections of our best selling items
+                </p>
+              </div>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Jade's Milk Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
                 </div>
-                <section class="flex flex-row items-center justify-center m-10 lg:text-text-2sm sm:text-text-sm text-text-xs">
-                    <div class="grid sm:grid-cols-3 grid-cols-2 lg:grid-cols-5 items-center justify-center gap-4 text-center">
-                        <a href="#smoothie"><button id="smoothie-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" data-color="dark-brown">Smoothie/Slushy</button></a>
-                        <a href="#tea"><button id="tea-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" >Milk Tea/Tea</button></a>
-                        <a href="#coffee"><button id="coffee-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer ">Coffee</button></a>
-                        <a href="#food"><button id="food-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer  " >Food</button></a>
-                        <a href="#topping"><button id="topping-btn" class="border-2 bg-dark-brown text-white p-1 w-full rounded-xl cursor-pointer" >Toppings</button></a>
-                    </div>
-                  </section>
-                  
-                  <section class="justify-center flex my-14">
-                    <div id="featured" class="content">
-                        <div class="flex flex-col items-center">
-                            <div class="mb-10 text-center items-center flex flex-col">
-                                <h1 class="text-text-base font-bold border-t-2 border-b-2 border-black text-center mb-3 w-8/12">Featured Items</h1>
-                                <p class="text-text-xs w-full">A variety selections of our best selling items</p>
-                            </div>
-                            <div class="w-screen max-w-5xl px-8">
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Jade's Milk Tea</h1>
-                                      <h1 class="w-2/5 text-right">$4.50</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry Milk Tea</h1>
-                                      <h1 class="w-2/5 text-right">$4.95</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Taro Milk Tea</h1>
-                                      <h1 class="w-2/5 text-right">$4.95</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Thai Tea</h1>
-                                      <h1 class="w-2/5 text-right">$4.50</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Jade's Milk Tea</h1>
-                                      <h1 class="w-2/5 text-right">$4.50</h1>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div id="smoothie" class="content">
-                        <div class="flex flex-col items-center">
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Smoothie</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Avocado</h1>
-                                      <h1 class="w-2/5 text-right">$6.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Banana</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Chocolate</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Coconut</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Coffee</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Cookies and Creams</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">HoneyDew</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Kiwi</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Lemon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Lychee</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Mango<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Mango Pineapple</h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Mangonada</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Matcha</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Passionfruit</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Peach</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Pinacolada</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Pineapple</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Strawberry<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Strawberry Banana<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry Lemon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Strawberry Mango<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Taro</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Taro Coconut</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Vanilla</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Watermelon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                            </div>
-
-                            <h1 class="text-text-base font-bold my-10 border-t-2 border-b-2 border-black w-2/12 text-center">Slushy</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Avocado</h1>
-                                      <h1 class="w-2/5 text-right">$6.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Banana</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Chocolate</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Coconut</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Coffee</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Cookies and Creams</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">HoneyDew</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Kiwi</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Lemon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Lychee</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Mango</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Mango Pineapple</h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Mangonada</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Matcha</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Passionfruit</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Peach</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Pinacolada</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Pineapple</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry Banana</h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry Lemon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Strawberry Mango</h1>
-                                      <h1 class="w-2/5 text-right">$5.75</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Taro</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Taro Coconut</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Vanilla</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                                  <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold">Watermelon</h1>
-                                      <h1 class="w-2/5 text-right">$5.25</h1>
-                                    </div>
-                                  </div>
-                            </div>
-                          </div>
-                    </div>
-                    
-                    <div id="tea" class="content">
-                        <div class="flex flex-col items-center">
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Milk Tea</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Jade's Milk Tea<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Strawberry Milk tea<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Taro Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Thai tea<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Mango Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Rose Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Oreo Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Lavender Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Matcha Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Matcha Cream tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Coffee Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Vanilla Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Oolong Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.55</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Green Tea Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.59</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Chocolate Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Thai Green tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Coconut Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Lychee Milk tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.95</h1>
-                                </div>
-                              </div>
-                            </div>
-
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Fruit Tea</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Fruit Tea Signature<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                      <h1 class="w-2/5 text-right">$5.50</h1>
-                                    </div>
-                                  </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Passionfruit Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Mango Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Lychee Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Strawberry Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Strawberry Lemon Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Watermelon Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Kiwi Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Peach Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Passionfruit Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Honey Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Mango Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Strawberry Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Peach Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Lemon Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Lychee Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Green Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Wintermelon Black Tea</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="coffee" class="content">
-                      <div class="flex flex-col items-center">
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Latte</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Vietnamese Iced Coffee<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Black Sugar Milk</h1>
-                                  <h1 class="w-2/5 text-right">$5.75</h1>
-                                </div>
-                                <p class="text-text-xs w-9/12">Include Black Sugar Boba And Creme Brulee</p>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Mocha Coffee</h1>
-                                  <h1 class="w-2/5 text-right">$5.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Caramel Coffee</h1>
-                                  <h1 class="w-2/5 text-right">$5.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Vanilla Coffee</h1>
-                                  <h1 class="w-2/5 text-right">$5.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Matcha Latte</h1>
-                                  <h1 class="w-2/5 text-right">$5.25</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Taro Latte</h1>
-                                  <h1 class="w-2/5 text-right">$5.25</h1>
-                                </div>
-                              </div>
-                            </div>
-
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-3/12 text-center">Non-Caffeinated</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Passionfruit</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Rose</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Mango</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Strawberry</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Lychee</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Hibicus Peach</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="food" class="content">
-                      <div class="flex flex-col items-center">
-                        <div class="mb-10 text-center items-center flex flex-col">
-                            <h1 class="text-text-base font-bold border-t-2 border-b-2 border-black text-center mb-3 w-3/12">Sandwiches</h1>
-                            <p class="text-text-xs w-9/12">Served W/ house butter, pickled carrots, cucumber, cilantro, jalapeno, Soy Sauce and Black Peppers.</p>
-                        </div>
-                            <div class="w-screen max-w-5xl px-8">
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <div class="w-3/5 font-semibold flex flex-row items-center gap-1">BBQ Pork Sandwich<AiFillHeart className="text-red-600" aria-hidden="true"/></div>
-                                      <div class="w-2/5 text-right">$5.75</div>
-                                    </div>
-                                </div>
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <div class="w-3/5 font-semibold flex flex-row items-center gap-1">BBQ Chicken Sandwich<AiFillHeart className="text-red-600" aria-hidden="true"/></div>
-                                      <div class="w-2/5 text-right">$5.75</div>
-                                    </div>
-                                </div>
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <div class="w-3/5 font-semibold">Fried Egg Sandwich</div>
-                                      <div class="w-2/5 text-right">$5.25</div>
-                                    </div>
-                                </div>
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <div class="w-3/5 font-semibold">Fried Tofu Sandwich</div>
-                                      <div class="w-2/5 text-right">$5.25</div>
-                                    </div>
-                                </div>
-                                <div class="py-2 text-text-2sm">
-                                    <div class="flex justify-between items-center">
-                                      <div class="w-3/5 font-semibold">Avocado Sandwich</div>
-                                      <div class="w-2/5 text-right">$5.25</div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Snacks</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Pork Eggroll<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$5.50</h1>
-                                </div>
-                                <p class="text-text-xs mt-1">4 Pieces</p>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Sesame Ball<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                                <p class="text-text-xs mt-1">6 Pieces</p>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold flex flex-row items-center gap-1">Pork Dumplings<AiFillHeart className="text-red-600" aria-hidden="true"/></h1>
-                                  <h1 class="w-2/5 text-right">$4.75</h1>
-                                </div>
-                                <p class="text-text-xs mt-1">5 Pieces</p>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Veggies Eggroll</h1>
-                                  <h1 class="w-2/5 text-right">$4.75</h1>
-                                </div>
-                                <p class="text-text-xs mt-1">4 Pieces</p>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Regular Fries</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <h1 class="w-3/5 font-semibold">Cheese Stick</h1>
-                                  <h1 class="w-2/5 text-right">$4.50</h1>
-                                </div>
-                                <p class="text-text-xs mt-1">5 Pieces</p>
-                              </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="topping" class="content">
-                      <div class="flex flex-col items-center">
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Toppings</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Black Sugar Boba</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Crystal Boba</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Tapioca</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Coffee Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Lychee Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Mango Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Mango Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Rainbow Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Strawberry Jelly</div>
-                                  <div class="w-2/5 text-right">$0.70</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Mango Popping</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Kiwi Popping</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Passionfruit Popping</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Aloevera</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Cream Brulee</div>
-                                  <div class="w-2/5 text-right">$0.95</div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <h1 class="text-text-base font-bold mb-10 border-t-2 border-b-2 border-black w-2/12 text-center">Substitution</h1>
-                            <div class="w-screen max-w-5xl px-8">
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Almond Milk</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Coconut Milk</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Oat Milk</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                              <div class="py-2 text-text-2sm">
-                                <div class="flex justify-between items-center">
-                                  <div class="w-3/5 font-semibold">Honey</div>
-                                  <div class="w-2/5 text-right">$0.80</div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                  </section>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Thai Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha Cream tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Pineapple</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Banana</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vietnamese Iced Coffee</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Passionfruit Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Peach Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">BBQ Pork Sandwich</div>
+                    <div class="w-2/5 text-right">$5.75</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">BBQ Chicken Sandwich</div>
+                    <div class="w-2/5 text-right">$5.75</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pork Eggroll</h1>
+                    <h1 class="w-2/5 text-right">$5.50</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">4 Pieces</p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pork Dumplings</h1>
+                    <h1 class="w-2/5 text-right">$4.75</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">5 Pieces</p>
+                </div>
+              </div>
             </div>
-        </main>
-        <script>
-            const buttons = document.querySelectorAll('button');
-            const contentDivs = document.querySelectorAll('.content');
+          </div>
 
-            // Show the "featured" content div by default
-            const featuredDiv = document.getElementById('featured');
-            
-            featuredDiv.style.display = 'block';
+          <div id="smoothie" class="content">
+            <div class="flex flex-col items-center">
+              <h1
+                class="mb-10 w-4/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold sm:w-3/12 md:w-2/12 md:text-text-md"
+              >
+                Smoothie
+              </h1>
+              <div
+                class="mb-3 w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Avocado</h1>
+                    <h1 class="w-2/5 text-right">$6.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Banana</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Chocolate</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coconut</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coffee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Cookies and Creams</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">HoneyDew</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Kiwi</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lemon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lychee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Pineapple</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mangonada</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Passionfruit</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Peach</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pinacolada</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pineapple</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Banana</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Lemon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro Coconut</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vanilla</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Watermelon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+              </div>
 
-            document.getElementById('smoothie').style.display = 'none';
-            document.getElementById('tea').style.display = 'none';
-            document.getElementById('coffee').style.display = 'none';
-            document.getElementById('food').style.display = 'none';
-            document.getElementById('topping').style.display = 'none';
+              <h1
+                class="my-10 w-3/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-2/12 md:text-text-md"
+              >
+                Slushy
+              </h1>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Avocado</h1>
+                    <h1 class="w-2/5 text-right">$6.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Banana</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Chocolate</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coconut</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coffee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Cookies and Creams</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">HoneyDew</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Kiwi</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lemon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lychee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Pineapple</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mangonada</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Passionfruit</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Peach</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pinacolada</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pineapple</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Banana</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Lemon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Mango</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro Coconut</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vanilla</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Watermelon</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            // Store the previously clicked button
-            let previousButton = null;
+          <div id="tea" class="content">
+            <div class="flex flex-col items-center">
+              <h1
+                class="mb-10 w-3/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-2/12 md:text-text-md"
+              >
+                Milk Tea
+              </h1>
+              <div
+                class="mb-10 w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Jade's Milk Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Thai tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Rose Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Oreo Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lavender Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha Cream tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coffee Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vanilla Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Oolong Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.55</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Green Tea Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.59</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Chocolate Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Thai Green tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Coconut Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lychee Milk tea</h1>
+                    <h1 class="w-2/5 text-right">$4.95</h1>
+                  </div>
+                </div>
+              </div>
 
-            // Function to reset the previous button's color
-            const resetPreviousButton = () => {
-                if (previousButton) {
-                previousButton.style.backgroundColor = '';
-                }
-            };
+              <h1
+                class="mb-10 w-4/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-2/12 md:text-text-md"
+              >
+                Fruit Tea
+              </h1>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Fruit Tea Signature</h1>
+                    <h1 class="w-2/5 text-right">$5.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Passionfruit Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lychee Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">
+                      Strawberry Lemon Green Tea
+                    </h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Watermelon Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Kiwi Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Peach Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Passionfruit Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Honey Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mango Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Strawberry Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Peach Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lemon Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Lychee Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Green Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Wintermelon Black Tea</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            buttons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    contentDivs.forEach((div) => div.style.display = 'none');
-                    document.getElementById(button.id.split('-')[0]).style.display = 'block';
+          <div id="coffee" class="content">
+            <div class="flex flex-col items-center">
+              <h1
+                class="mb-10 w-2/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:text-text-md"
+              >
+                Latte
+              </h1>
+              <div
+                class="mb-10 w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vietnamese Iced Coffee</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Black Sugar Milk</h1>
+                    <h1 class="w-2/5 text-right">$5.75</h1>
+                  </div>
+                  <p class="w-9/12 text-text-xs">
+                    Include Black Sugar Boba And Creme Brulee
+                  </p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Mocha Coffee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Caramel Coffee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Vanilla Coffee</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Matcha Latte</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Taro Latte</h1>
+                    <h1 class="w-2/5 text-right">$5.25</h1>
+                  </div>
+                </div>
+              </div>
 
-                    resetPreviousButton();
-                    button.style.backgroundColor = '#000';
-                    previousButton = button;
+              <h1
+                class="mb-10 w-5/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:text-text-md"
+              >
+                Non-Caffeinated
+              </h1>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Passionfruit</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Rose</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Mango</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Strawberry</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Lychee</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Hibicus Peach</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                });
-            });
-        </script>
-    </body>
-    <Footer/>
+          <div id="food" class="content">
+            <div class="flex flex-col items-center">
+              <div class="mb-10 flex flex-col items-center text-center">
+                <h1
+                  class="mb-3 w-5/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-3/12 md:text-text-md"
+                >
+                  Sandwiches
+                </h1>
+                <p class="w-9/12 text-text-xs">
+                  Served W/ house butter, pickled carrots, cucumber, cilantro,
+                  jalapeno, Soy Sauce and Black Peppers.
+                </p>
+              </div>
+              <div
+                class="mb-10 w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">BBQ Pork Sandwich</div>
+                    <div class="w-2/5 text-right">$5.75</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">BBQ Chicken Sandwich</div>
+                    <div class="w-2/5 text-right">$5.75</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Fried Egg Sandwich</div>
+                    <div class="w-2/5 text-right">$5.25</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Fried Tofu Sandwich</div>
+                    <div class="w-2/5 text-right">$5.25</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Avocado Sandwich</div>
+                    <div class="w-2/5 text-right">$5.25</div>
+                  </div>
+                </div>
+              </div>
+
+              <h1
+                class="mb-10 w-3/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-2/12 md:text-text-md"
+              >
+                Snacks
+              </h1>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pork Eggroll</h1>
+                    <h1 class="w-2/5 text-right">$5.50</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">4 Pieces</p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Sesame Ball</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">6 Pieces</p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Pork Dumplings</h1>
+                    <h1 class="w-2/5 text-right">$4.75</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">5 Pieces</p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Veggies Eggroll</h1>
+                    <h1 class="w-2/5 text-right">$4.75</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">4 Pieces</p>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Regular Fries</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <h1 class="w-3/5 font-semibold">Cheese Stick</h1>
+                    <h1 class="w-2/5 text-right">$4.50</h1>
+                  </div>
+                  <p class="mt-1 text-text-xs">5 Pieces</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="topping" class="content">
+            <div class="flex flex-col items-center">
+              <h1
+                class="mb-10 w-4/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-2/12 md:text-text-md"
+              >
+                Toppings
+              </h1>
+              <div
+                class="mb-10 w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Black Sugar Boba</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Crystal Boba</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Tapioca</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Coffee Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Lychee Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Mango Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Mango Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Rainbow Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Strawberry Jelly</div>
+                    <div class="w-2/5 text-right">$0.70</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Mango Popping</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Kiwi Popping</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Passionfruit Popping</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Aloevera</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Cream Brulee</div>
+                    <div class="w-2/5 text-right">$0.95</div>
+                  </div>
+                </div>
+              </div>
+
+              <h1
+                class="mb-10 w-5/12 border-b-2 border-t-2 border-black text-center text-text-base font-bold md:w-3/12 md:text-text-md"
+              >
+                Substitution
+              </h1>
+              <div
+                class="w-screen max-w-5xl px-8 text-text-sm md:text-text-2sm"
+              >
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Almond Milk</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Coconut Milk</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Oat Milk</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+                <div class="py-2">
+                  <div class="flex items-center justify-between">
+                    <div class="w-3/5 font-semibold">Honey</div>
+                    <div class="w-2/5 text-right">$0.80</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      const buttons = document.querySelectorAll("button");
+      const contentDivs = document.querySelectorAll(".content");
+
+      // Show the "featured" content div by default
+      const featuredButton = document.getElementById("featured-btn");
+      const featuredDiv = document.getElementById("featured");
+
+      featuredDiv.style.display = "block";
+      featuredButton.style.backgroundColor = "#000"; // Highlight the smoothie button
+
+      document.getElementById("smoothie").style.display = "none";
+      document.getElementById("tea").style.display = "none";
+      document.getElementById("coffee").style.display = "none";
+      document.getElementById("food").style.display = "none";
+      document.getElementById("topping").style.display = "none";
+
+      // Store the previously clicked button
+      let previousButton = featuredButton;
+
+      // Function to reset the previous button's color
+      const resetPreviousButton = () => {
+        if (previousButton) {
+          previousButton.style.backgroundColor = "";
+        }
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          contentDivs.forEach((div) => (div.style.display = "none"));
+          document.getElementById(button.id.split("-")[0]).style.display =
+            "block";
+
+          resetPreviousButton();
+          button.style.backgroundColor = "#000";
+          previousButton = button;
+        });
+      });
+    </script>
+    <Footer />
+  </>
 </html>
-
